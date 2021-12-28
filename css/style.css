@@ -33,6 +33,7 @@ h6 {
 /*intro*/
 
 .intro {
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,7 +101,7 @@ h6 {
 /*Nav*/
 
 .nav {
-  font-size: 14px;
+  font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -134,8 +135,13 @@ h6 {
   color: #fce38a;
 }
 
-.nav__link:hover:after {
+.nav__link:hover:after,
+.nav__link.activ:after {
   opacity: 1;
+}
+
+.nav__link.activ {
+  color: #fce38a;
 }
 
 /* Button*/
@@ -156,4 +162,45 @@ h6 {
 .btn:hover {
   background-color: #fff;
   color: black;
+}
+
+/*slide*/
+.slider {
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 90px;
+}
+
+.slider__item {
+  width: 23%;
+  padding: 20px 0;
+  position: relative;
+  border-top: 3px solid #fff;
+  opacity: 0.7;
+
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.slider__item.activ {
+  opacity: 1;
+}
+
+.slider__item.activ:before {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: #f38181;
+
+  position: absolute;
+  top: -3px;
+  left: 0;
+  z-index: 1;
+}
+
+.slider__num {
+  font-size: 24px;
+  font-weight: 700;
 }
